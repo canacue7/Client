@@ -1,0 +1,57 @@
+<div class="container col-md-6">
+    <div class="card">
+        <div class="card-header">
+            <h3>Create new user</h3>
+        </div>
+        <div class="card-body">
+            <form [formGroup]="profileForm" > 
+                <!-- <div class="form-group">
+                    <label for="">ID kind</label>
+                    <input formControlName="tipoId" type="text" class="form-control">
+                </div> -->
+                <div class="form-group">
+                    <label for="">ID kind</label>
+                        <select class="custom-select"  formControlName="tipoId">
+                            <option value="">Introduce id kind</option>
+                            <option value="cc" >cc</option>
+                            <option value="TI" >TI</option>
+
+                     </select> 
+                </div>
+                <div class="form-group">
+                    <label for="">ID number</label>
+                    <input formControlName="identificacion" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="">Name</label>
+                    <input formControlName="name"  type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="">Last name</label>
+                    <input formControlName="apellido"  type="text" class="form-control">
+                </div>
+                
+                <div class="form-group">
+                    <label for="">Email:</label>
+                    <input formControlName="email" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="">Birthday</label>
+                    <input formControlName="fecha_nac" type="date" class="form-control">
+                </div>
+                <!-- <div class="form-group">
+                    <label for="">State</label>
+                        <select class="custom-select"  formControlName="estado">
+                            <option value="">Select state</option>
+                            <option value="true" >Active</option>
+                            <option value="false" >Inactive</option>
+
+                     </select> 
+                </div> -->
+                <button (click)="Guardar()" class="btn btn-danger">Save</button>
+                <button (click)="Return()" class="btn btn-secondary" style="margin-left: 10px;">Return</button>
+
+            </form>
+        </div>
+    </div>
+</div>
